@@ -27,7 +27,7 @@ class HacksMod(loader.Module):
             a = a + randint(0, 20)
         
         ret = "<b>FBI Hacked!!</b>\n"
-        ret += "<b>IP:<\b> <code>{}.{}.{}.{}</code>\n".format(randint(0, 255), randint(0, 255), randint(0, 255), randint(10, 255))
+        ret += "<b>IP:</b> <code>{}.{}.{}.{}</code>\n".format(randint(0, 255), randint(0, 255), randint(0, 255), randint(10, 255))
         ret += "<b>Username:</b> <code>root</code>\n"
         ret += "<b>Password:</b> <code>{}</code>".format(secrets.token_hex(15))
         await utils.answer(message, ret)
