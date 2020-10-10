@@ -8,10 +8,10 @@ logger = logging.getLogger(__name__)
 
 
 def register(cb):
-    cb(Hacks())
+    cb(HacksMod())
 
 
-class Hacks(loader.Module):
+class HacksMod(loader.Module):
 
     """Fack FBI Hacking Script"""
     def __init__(self):
