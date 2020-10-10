@@ -22,7 +22,8 @@ class HacksMod(loader.Module):
         logger.debug("Running Hacks!")
         a = 0
         while a < 100:
-            await utils.answer(message, "<b>Hacking FBI</b> <code>{}%</code>".format(a))
+            msg = "<b>Hacking FBI</b> <code>{}%</code>".format(a)
+            await utils.answer(message, msg)
             time.sleep(2)
             a = a + randint(0, 20)
         
