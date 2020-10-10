@@ -24,7 +24,7 @@ class HacksMod(loader.Module):
         while a < 100:
             msg = "<b>Hacking FBI</b> <code>{}%</code>".format(a)
             await utils.answer(message, msg)
-            time.sleep(2)
+            time.sleep(3)
             a = a + randint(0, 20)
         
         ret = "<b>FBI Hacked!!</b>\n"
