@@ -34,6 +34,8 @@ class hacksMod(loader.Module):
         ret += "<b>SHA256:</b> <code>{}</code>".format(hash)
         await utils.answer(message, ret)
 
+
+
     async def hackscmd(self, message):
         """Hacks the FBI when you type .hacks"""
         logger.debug("Running Hacks!")
@@ -44,7 +46,7 @@ class hacksMod(loader.Module):
             a = a + randint(0, 20)
         
         ret = "<b>FBI Hacked!!</b>\n"
-        ret += "<b>IP: <\b><code>{}.{}.{}.{}</code>\n".format(randint(0, 255), randint(0, 255), randint(0, 255), randint(10, 255))
-        ret += "<b>Username:</b><code>root</code>\n"
-        ret += "<b>Password: </b><code>{}</code>".format(secrets.token_hex(15))
+        ret += "<b>IP: </b><code>{}.{}.{}.{}</code>\n".format(randint(0, 255), randint(0, 255), randint(0, 255), randint(10, 255))
+        ret += "<b>Username: </b><code>root</code>\n"
+        ret += "<b>Password: </b><code>{}</code>".format(secrets.token_hex(5))
         await utils.answer(message, ret)
