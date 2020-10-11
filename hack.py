@@ -13,7 +13,8 @@ def register(cb):
 
 
 class hacksMod(loader.Module):
-    """Fack FBI Hacking Script"""
+    """Fack FBI Hacking Script and Other Cool Scripts"""
+    strings = {"name": "Hacks"}
     
     def __init__(self):
         pass
@@ -47,6 +48,7 @@ class hacksMod(loader.Module):
         command = text.split(' ')[0]
         args = text.split(' ')[1:]
         if command == ".hacks":
+            logger.debug("User Running Hacks!")
             a = 0
             while a < 100:
                 await utils.answer(message, "<b>Hacking FBI</b> <code>{}%</code>".format(a))
@@ -59,6 +61,7 @@ class hacksMod(loader.Module):
             ret += "<b>Password: </b><code>{}</code>".format(secrets.token_hex(5))
             await utils.answer(message, ret)
         elif command == ".hash":
+            logger.debug("User Running Hash!")
             if len(args) == 0:
                 return
             logger.debug("Running Hash!")
@@ -67,6 +70,7 @@ class hacksMod(loader.Module):
             ret += "<b>SHA256:</b> <code>{}</code>".format(hash)
             await utils.answer(message, ret)
         elif command == ".time":
+            logger.debug("User Running time")
             data = datetime.now()
             dt_string = data.strftime("%d/%m/%Y %H:%M:%S")
             await utils.answer(message, dt_string)
