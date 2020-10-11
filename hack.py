@@ -3,7 +3,7 @@ import logging
 from .. import loader, utils
 from random import randint
 import time, secrets, hashlib
-
+from datetime import datetime
 logger = logging.getLogger(__name__)
 
 
@@ -17,6 +17,12 @@ class hacksMod(loader.Module):
     def __init__(self):
         pass
     
+    async def timecmd(self, message):
+        """Gets the Current Time"""
+        data = datetime.now()
+        dt_string = data.strftime("%d/%m/%Y %H:%M:%S")
+        await utils.answer(message, dt_string)
+
     async def hashcmd(self, message):
         """Makes a SHA256 hash when you type .hash"""
         text = utils.get_args_raw(message.message)
