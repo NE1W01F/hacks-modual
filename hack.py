@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 def register(cb):
     cb(hacksMod())
 
-
+@loader.tds
 class hacksMod(loader.Module):
     """Fack FBI Hacking Script and Other Cool Scripts"""
     strings = {"name": "Hacks"}
